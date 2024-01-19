@@ -5,14 +5,18 @@ import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import emailjs from '@emailjs/browser';
 import {useState} from "react";
+import {useRouter} from "next/navigation";
 const Page = () => {
 
     const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+    const router = useRouter();
 
     const handleSubmit = (event: any) => {
         event.preventDefault();
         const data = new FormData(event.target);
         const value = Object.fromEntries(data.entries());
+
 
         if (value.FirstName === "" || value.LastName === "" || value.Mail === "" || value.Message === "") {
             setError("Veuillez remplir tous les champs")
@@ -30,8 +34,16 @@ const Page = () => {
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 setError("")
+                setSuccess("Votre message a bien été envoyé")
+
+                setTimeout(() => {
+                    setSuccess("")
+                    setError("")
+                    router.replace("/")
+                }, 2000)
             }, (error) => {
                 console.log('FAILED...', error);
+                setSuccess("")
                 setError("Une erreur est survenue, veuillez réessayer plus tard")
             });
     };
@@ -47,6 +59,7 @@ const Page = () => {
                     <Input name="Mail" type="email" placeholder="Email" className="block w-full rounded-md border-gray-300 shadow-sm" />
                     <Textarea name="Message"  rows={7} placeholder="Message" className="block resize-none w-full rounded-md border-gray-300 shadow-sm" />
                     {error.length > 0 && <p className={"text-red-500"}>{error}</p>}
+                    {success.length > 0 && <p className={"text-green-500"}>{success}</p>}
                     <Button type="submit" variant={"myvariant"} className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Send
                     </Button>
