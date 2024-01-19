@@ -23,7 +23,7 @@ export default function RootLayout({
       <ThemeProvider attribute={"class"} defaultTheme={"system"} enableSystem disableTransitionOnChange>
           <div className={"flex flex-col justify-between min-h-screen h-full"}>
               <Header/>
-              <div className={"flex-grow h-full"}>
+              <div className={"flex-grow my-10"}>
                   {children}
               </div>
               <Footer/>

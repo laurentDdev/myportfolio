@@ -21,7 +21,8 @@ const config = {
       colors: {
         "myblue": "#007BFF",
         "myyellow": "#FFC107",
-        "mytext": "#6C757D"
+        "mytext": "#6C757D",
+        "mybg": "#292B2C"
       },
       fontFamily: {
         verdana: ["Verdana", "sans-serif"],

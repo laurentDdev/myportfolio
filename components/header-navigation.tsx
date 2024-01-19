@@ -10,7 +10,7 @@ import Link from "next/link";
 const HeaderNavigation = () => {
     return (
         <NavigationMenu>
-            <NavigationMenuList className={"flex gap-3"}>
+            <NavigationMenuList>
                 <NavigationMenuItem>
                     <Link href={"/"} legacyBehavior passHref >
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -20,7 +20,7 @@ const HeaderNavigation = () => {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Link href={"/about"} legacyBehavior passHref >
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()}`}>
                             About
                         </NavigationMenuLink>
                     </Link>

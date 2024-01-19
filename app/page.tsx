@@ -6,8 +6,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <PageContainer>
-      <div className={"grid grid-cols-2  h-full"}>
-        <div className={"w-[90%] flex flex-col justify-center gap-6"} >
+      <div className={"grid items-center gap-6 grid-cols-1 xl:grid-cols-2 h-full"}>
+        <div className={"w-[90%] flex flex-col justify-center gap-6 order-last xl:order-first"} >
             <h1 className={"text-7xl font-verdana font-bold"}>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Hey It's Laurent I'm a <span className={"text-myblue"}>fullstack developer</span>
