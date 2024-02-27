@@ -112,21 +112,4 @@ export const WorksList: Works[] = [
         repo: "https://github.com/laurentDdev/iptracker",
         image: "/assets/website/myiptracker.png"
     },
-    {
-        name: "Ip Address Tracker",
-        description: "A straightforward tool to quickly locate and visualize the real-time geographical location of an IP address. Get swift insights into the origin of a connection with this user-friendly IP tracking solution.",
-        technologies: ["React", "react-map-gl", "IP Geolocation API", "Vite"],
-        url: "https://iptracker-orpin.vercel.app/",
-        repo: "https://github.com/laurentDdev/iptracker",
-        image: "/assets/website/myiptracker.png"
-    },
-    {
-        name: "Ip Address Tracker",
-        description: "A straightforward tool to quickly locate and visualize the real-time geographical location of an IP address. Get swift insights into the origin of a connection with this user-friendly IP tracking solution.",
-        technologies: ["React", "react-map-gl", "IP Geolocation API", "Vite"],
-        url: "https://iptracker-orpin.vercel.app/",
-        repo: "https://github.com/laurentDdev/iptracker",
-        image: "/assets/website/myiptracker.png"
-    },
-
 ]
